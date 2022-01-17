@@ -1,0 +1,76 @@
+@contentType = application/json
+@BASE_URL = http://localhost:3000
+
+### Welcome page
+ GET {{BASE_URL}} HTTP/1.1
+
+### Create a new user
+ POST {{BASE_URL}}/api/auth/signup HTTP/1.1
+ Content-Type: {{contentType}}
+
+{
+    "firstName":"test",
+    "lastName":"user",
+    "email":"testUser@example.com",
+    "password":"Testuser1"
+}
+###
+# @name signin
+ POST {{BASE_URL}}/api/auth/signin HTTP/1.1
+ Content-Type: {{contentType}}
+
+{
+    "firstName":"test",
+    "lastName":"user",
+    "email":"testUser@example.com",
+    "password":"Testuser1"
+}
+###
+@authToken = "Bearer" {{signin.response.body.data}}
+
+# @name editUser
+ POST {{BASE_URL}}/api/companies/create HTTP/1.1
+ Authorization: {{authToken}}
+ Content-Type: {{contentType}}
+
+{
+    "supportEmail":"testUser1@example.com",
+    "companyName":"Testuser1",
+    "brandColor": "#ffff"
+}
+###
+
+# @name createCompany
+ POST {{BASE_URL}}/api/companies/create HTTP/1.1
+ Authorization: {{authToken}}
+ Content-Type: {{contentType}}
+
+{
+    "supportEmail":"testUser1@example.com",
+    "companyName":"Testuser1",
+    "brandColor": "#ffff"
+}
+###
+# @name editCompany
+ PUT {{BASE_URL}}/api/companies/create HTTP/1.1
+ Authorization: {{authToken}}
+ Content-Type: {{contentType}}
+
+{
+  "companyName": "should",
+  "brandColor": "#ffff",
+  "supportEmail": " should@gmail.com",
+  "websiteUrl": "kd.com",
+  "google": "hdsfsfjf.io",
+  "twitter": "fdds.io",
+  "facebook": "dsfdsa.net",
+  "websiteUrl": "dsfs.io",
+  "customDomain": "dfsd.io",
+  "subDomain": "ds.io",
+  "widgetLauncherIconColor": "#ffff",
+  "widgetLauncherBackgroundColor": "#ffff",
+  "widgetNavbarColor2": "#ffff",
+  "widgetNavbarColor1": "#ffff",
+  "widgetPrimaryColor": "#ffff",
+}
+###

@@ -1,0 +1,18 @@
+html
+  head
+    link(href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet")
+  body(style={"font-size":"16px","font-family": "'Source Sans Pro', sans-serif","width":'100%',"heght":'100%',"position":'fixed',"padding":"5% 0%","background":"#F6F6F6","color":"rgb(33, 37, 41);","line-height":"25px"})
+    div(style = { "box-shadow": "0 2.8px 2.2px rgba(0,0,0,0.034), 0 6.7px 5.3px rgba(0,0,0,0.048), 0 12.5px 10px rgba(0,0,0,0.06), 0 22.3px 17.9px rgba(0,0,0,0.072), 0 41.8px 33.4px rgba(0,0,0,0.086), 0 100px 80px rgba(0,0,0,0.12)","background":'#FFFF',"padding":"20px","max-width":"500px","height":"60%","border":"#E5E5E5 solid 1px","border-radius":"5px","margin":"auto", "text-align":"center"})
+      div(style={"width":'100%',"text-align":'center',"color":"rgb(99, 184, 246)","overflow": "hidden"})
+        ul(style={ "list-style-type": "none","width":"190px", "margin":"auto","padding":"0px"})
+          li(style={ "float": "left","margin":"0px","padding":"0px","width":"40px"})
+             img(src='https://res.cloudinary.com/hezzie/image/upload/v1586797952/Screen_Shot_2020-04-13_at_18.26.22_yeosh3.png' style={"height":"40px"})
+          li(style={"float": "right","margin":"0px","padding":"0px"})
+      div(style={"border-radius":"10px","width":'94%',"margin":'auto',"padding":"0px 3%","heght":'71%',"color":"#252525"})
+        hr(style={"color":"#E5E5E5"}) 
+        p(style={}) Hi #{receiver} 👋
+        block content
+    div(style={"max-width":"500px","margin":"auto","heght":'auto',"text-align":'center',"padding":"3px 1%"})
+        block foot
+          p(style={}) You received this email to let you know about important changes to your Evenhelp Account and services.
+          | © 2020 Evenhelp
